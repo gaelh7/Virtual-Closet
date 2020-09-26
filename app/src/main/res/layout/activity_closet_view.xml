@@ -143,16 +143,16 @@
     <include
         layout="@layout/content_closet_view"
         android:layout_width="match_parent"
-        android:layout_height="524dp"
+        android:layout_height="479dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="false"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="-211dp"
+        android:layout_marginStart="0dp"
         android:layout_marginLeft="-1dp"
-        android:layout_marginEnd="-10dp"
-        android:layout_marginBottom="-32dp" />
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="5dp" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
