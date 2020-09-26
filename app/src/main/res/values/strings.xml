@@ -93,4 +93,17 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="activewear">Activewear</string>
+    <string name="dresses">Dresses</string>
+    <string name="jackets_coats"><![CDATA[Jackets & Coats]]></string>
+    <string name="jeans">Jeans</string>
+    <string name="jumpsuits">Jumpsuits</string>
+    <string name="lingerie">Lingerie</string>
+    <string name="pants">Pants</string>
+    <string name="shorts">Shorts</string>
+    <string name="tops">Tops</string>
+    <string name="create_item">Create Item</string>
+    <string name="swimwear">Swimwear</string>
+    <string name="sweaters">Sweaters</string>
+    <string name="skirts">Skirts</string>
 </resources>
