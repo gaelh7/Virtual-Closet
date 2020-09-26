@@ -25,14 +25,12 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
     private Button scrollButton;
-    private Button imageButton;
     private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         scrollButton = findViewById(R.id.button);
-        imageButton = findViewById(R.id.button3);
         button = findViewById(R.id.button4);
 
         button.setOnClickListener(new View.OnClickListener(){
@@ -48,68 +46,14 @@ public class MainActivity extends AppCompatActivity {
                 scrollActivity();
             }
         });
-
-        imageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(ContextCompat.checkSelfPermission(getApplicationContext(),
-                        Manifest.permission.READ_EXTERNAL_STORAGE
-                ) != PackageManager.PERMISSION_GRANTED){
-                    ActivityCompat.requestPermissions(MainActivity.this,
-                            new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-                            1
-                    );
-                }
-                else imageActivity();
-            }
-        });
     }
     public void openUploadItem(){
         Intent intent = new Intent(this, UploadItem.class);
         startActivity(intent);}
 
-    private void imageActivity() {
-        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-        startActivityForResult(Intent.createChooser(intent,"Select Picture"), 9000);
-    }
-
     private void scrollActivity() {
         Intent toScroll = new Intent(this, ClosetView.class);
         startActivity(toScroll);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == 9000 && resultCode == RESULT_OK && null != data) {
-            Uri selectedImage = data.getData();
-            String[] filePathColumn = {MediaStore.Images.Media.DATA};
-
-            Cursor cursor = getContentResolver().query(selectedImage,
-                    filePathColumn, null, null, null);
-            cursor.moveToFirst();
-
-            int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-            String picturePath = cursor.getString(columnIndex);
-            cursor.close();
-
-            ImageView imageView = findViewById(R.id.imageView);
-            imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath));
-
-        }
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
-        if(requestCode == 1 && grantResults.length > 0){
-            if(grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                imageActivity();
-            }
-            else Toast.makeText(this, "Permission Denied", 3);
-        }
     }
 
     @Override
