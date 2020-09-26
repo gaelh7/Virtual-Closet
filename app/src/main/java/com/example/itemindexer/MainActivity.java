@@ -1,5 +1,6 @@
 package com.example.itemindexer;
 
+import android.media.Image;
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
