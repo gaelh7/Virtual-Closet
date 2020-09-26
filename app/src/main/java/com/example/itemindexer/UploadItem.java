@@ -52,9 +52,14 @@ public class UploadItem extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ControlPanel.addItem(new Item(path, tags));
+                openDialog();
             }
         });
 
+    }
+    public void openDialog(){
+        Dialog exampleDialog = new Dialog();
+        exampleDialog.show(getSupportFragmentManager(),"dialog");
     }
 
     public void onCheckboxClicked(View view){
