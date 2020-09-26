@@ -10,7 +10,7 @@ public class ControlPanel {
         itemStorage.add(i);
     }
 
-    public void search(Tag tag) {
+    public static void search(Tag tag) {
 
         ArrayList<Item> highlightedItems = new ArrayList<Item>();
 
@@ -21,8 +21,10 @@ public class ControlPanel {
                 // and then a mechanism to display the tags, check marked
             }
         }
+    }
 
-
+    public static ArrayList<Item> getItemStorage(){
+        return itemStorage;
     }
 
 }

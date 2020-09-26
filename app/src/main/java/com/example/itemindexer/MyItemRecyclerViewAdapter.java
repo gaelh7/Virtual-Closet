@@ -1,5 +1,7 @@
 package com.example.itemindexer;
 
+import android.graphics.BitmapFactory;
+import android.widget.ImageView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -7,19 +9,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.itemindexer.dummy.DummyContent.DummyItem;
+//import com.example.itemindexer.dummy.DummyContent.DummyItem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
- * {@link RecyclerView.Adapter} that can display a {@link DummyItem}.
  * TODO: Replace the implementation with code for your data type.
  */
 public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecyclerViewAdapter.ViewHolder> {
 
-    private final List<DummyItem> mValues;
+    private final ArrayList<Item> mValues;
 
-    public MyItemRecyclerViewAdapter(List<DummyItem> items) {
+    public MyItemRecyclerViewAdapter(ArrayList<Item> items) {
         mValues = items;
     }
 
@@ -33,8 +35,7 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).id);
-        holder.mContentView.setText(mValues.get(position).content);
+        holder.mImageView.setImageBitmap(BitmapFactory.decodeFile(holder.mItem.getPath()));
     }
 
     @Override
@@ -44,20 +45,18 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
-        public final TextView mIdView;
-        public final TextView mContentView;
-        public DummyItem mItem;
+        public final ImageView mImageView;
+        public Item mItem;
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
-            mIdView = (TextView) view.findViewById(R.id.item_number);
-            mContentView = (TextView) view.findViewById(R.id.content);
+            mImageView = view.findViewById(R.id.item_image_view);
         }
 
-        @Override
-        public String toString() {
-            return super.toString() + " '" + mContentView.getText() + "'";
-        }
+//        @Override
+//        public String toString() {
+//            return super.toString() + " '" + mContentView.getText() + "'";
+//        }
     }
 }

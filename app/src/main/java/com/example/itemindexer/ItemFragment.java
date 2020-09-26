@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.itemindexer.dummy.DummyContent;
+//import com.example.itemindexer.dummy.DummyContent;
 
 /**
  * A fragment representing a list of Items.
@@ -64,13 +64,13 @@ public class ItemFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyItemRecyclerViewAdapter(DummyContent.ITEMS));
+            recyclerView.setAdapter(new MyItemRecyclerViewAdapter(ControlPanel.getItemStorage()));
         }
         return view;
     }
 
     public interface OnListFragmentInteractionListener {
-        void onListFragmentInteraction(DummyContent.DummyItem item);
+        void onListFragmentInteraction(Item item);
     }
 
 }

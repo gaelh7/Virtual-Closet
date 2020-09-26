@@ -1,7 +1,7 @@
 package com.example.itemindexer;
 import android.os.Bundle;
 
-import com.example.itemindexer.dummy.DummyContent;
+//import com.example.itemindexer.dummy.DummyContent;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,7 +17,7 @@ public class ClosetView extends AppCompatActivity implements ItemFragment.OnList
     }
 
     @Override
-    public void onListFragmentInteraction(DummyContent.DummyItem item) {
+    public void onListFragmentInteraction(Item item) {
     }
 
 }
