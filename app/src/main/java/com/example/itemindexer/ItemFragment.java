@@ -12,6 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+import java.util.List;
+
 //import com.example.itemindexer.dummy.DummyContent;
 
 /**
@@ -23,6 +26,7 @@ public class ItemFragment extends Fragment {
     private static final String ARG_COLUMN_COUNT = "column-count";
     // TODO: Customize parameters
     private int mColumnCount = 1;
+    private static List<Item> itemList = ControlPanel.getItemStorage();
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -64,9 +68,13 @@ public class ItemFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyItemRecyclerViewAdapter(ControlPanel.getItemStorage()));
+            recyclerView.setAdapter(new MyItemRecyclerViewAdapter(itemList));
         }
         return view;
+    }
+
+    public static void refresh(List<Item> items){
+        itemList = new ArrayList<Item>(items);
     }
 
     public interface OnListFragmentInteractionListener {
