@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ControlPanel {
 
-    static private ArrayList<Item> itemStorage;
+    static private ArrayList<Item> itemStorage = new ArrayList<>();
 
     public static void addItem(Item i) {
         itemStorage.add(i);
