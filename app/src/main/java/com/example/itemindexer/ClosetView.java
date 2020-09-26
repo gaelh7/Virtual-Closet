@@ -20,6 +20,14 @@ public class ClosetView extends AppCompatActivity implements ItemFragment.OnList
     public void onListFragmentInteraction(Item item) {
     }
 
+    public void allFilterTapped(View view) {
+    }
+
+    public void dressesFilterTapped(View view) {
+    }
+
+    public void jackets_coatsFilterTapped(View view) {
+    }
 }
 
 
