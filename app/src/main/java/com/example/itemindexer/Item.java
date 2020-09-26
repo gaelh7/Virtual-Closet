@@ -12,11 +12,16 @@ public class Item {
     private Image im;
 
     //@ Precondition length(tags) == NUMTAGS
-    public Item(boolean[] tags){
+    public Item(){
         this.tags = tags; // Maybe copy
     }
 
     public boolean getTag(Tag t){
         return tags[t.ordinal()];
     }
+
+    public void setTagTrue(Tag t) { tags[t.ordinal()] = true; }
+
+    public void setTagFalse(Tag t) { tags[t.ordinal()] = false; }
+
 }
