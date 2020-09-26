@@ -2,4 +2,5 @@
     <string name="app_name">Item Indexer</string>
     <string name="action_settings">Settings</string>
     <string name="view_your_closet">View Your Closet</string>
+    <string name="upload_image">Upload Image</string>
 </resources>
