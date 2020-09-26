@@ -40,9 +40,30 @@
         android:layout_marginRight="118dp"
         android:layout_marginBottom="39dp"
         android:text="@string/upload_image" />
+
     <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="349dp" app:srcCompat="@android:drawable/alert_light_frame"
-            android:id="@+id/imageView"/>
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="349dp"
+        app:srcCompat="@android:drawable/alert_light_frame" />
+
+    <SearchView
+        android:id="@+id/Search"
+        android:layout_width="286dp"
+        android:layout_height="34dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="430dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginRight="61dp"
+        android:layout_marginBottom="267dp"
+        android:background="#FFFFFF"
+        android:gravity="fill_horizontal"
+        android:inputType="text"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        tools:visibility="visible" />
 
 </RelativeLayout>

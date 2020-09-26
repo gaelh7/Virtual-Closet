@@ -1,5 +1,9 @@
 package com.example.itemindexer;
 
+import android.app.SearchManager;
+import android.app.SearchableInfo;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
@@ -16,6 +20,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.SearchView;
 
 public class MainActivity extends AppCompatActivity {
     private Button scrollButton;
@@ -40,6 +45,40 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /*
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_activity_actions, menu);
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(SearchItem);
+
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        ComponentName componentName = new ComponentName(context, SearchableInfo)
+
+        searchView.setOnQueryTextListener(
+                new SearchView.OnQueryTextListener() {
+                    @Override
+                    public boolean onQueryTextChange(String newText) {
+                        return false;
+                    }
+
+                    @Override
+                    public onQueryTextSubmit(String query) {
+
+                    }
+                });
+
+    }
+
+    private void handleIntent(Intent intent) {
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            String query = intent.getStringExtra(SearchManager.QUERY);
+            doMySearch(query);
+        }
+    }
+
+    // Code implementation of search from the video, but its really buggy so I'm trying to see if there's another way
+    */
     private void imageActivity() {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(Intent.createChooser(intent,"Select Picture"), 9000);
