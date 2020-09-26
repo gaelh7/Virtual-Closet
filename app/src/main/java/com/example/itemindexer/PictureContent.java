@@ -1,4 +1,4 @@
-package com.example.itemindexer.dummy;
+package com.example.itemindexer;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,7 +11,7 @@ import java.util.Map;
  * <p>
  * TODO: Replace all uses of this class before publishing your app.
  */
-public class DummyContent {
+public class PictureContent {
 
     /**
      * An array of sample (dummy) items.
@@ -53,20 +53,5 @@ public class DummyContent {
     /**
      * A dummy item representing a piece of content.
      */
-    public static class DummyItem {
-        public final String id;
-        public final String content;
-        public final String details;
 
-        public DummyItem(String id, String content, String details) {
-            this.id = id;
-            this.content = content;
-            this.details = details;
-        }
-
-        @Override
-        public String toString() {
-            return content;
-        }
-    }
 }
