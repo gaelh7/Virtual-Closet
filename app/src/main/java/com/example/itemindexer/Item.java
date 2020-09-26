@@ -15,7 +15,7 @@ public class Item {
     //@ Precondition length(tags) == NUMTAGS
     public Item(String path, boolean[] tags){
         this.path = path;
-        this.tags = tags; // Maybe copy
+        this.tags = tags.clone(); // Maybe copy
     }
 
     public boolean getTag(Tag t){
