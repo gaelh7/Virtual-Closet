@@ -25,7 +25,7 @@ public class ControlPanel {
 
         List<Item> highlightedItems = new ArrayList<Item>();
 
-        for (int i = 0; i < Tag.NUMTAGS.ordinal(); i++) {
+        for (int i = 0; i < itemStorage.size(); i++) {
             if (itemStorage.get(i).matchTags(selectedTags)) {
                 highlightedItems.add(itemStorage.get(i));
             }
