@@ -28,15 +28,16 @@ public class ClosetView extends AppCompatActivity implements ItemFragment.OnList
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View v) {
-                RecyclerView recyclerView = findViewById(R.id.recyclerview);
-                recyclerView.setAdapter(new MyItemRecyclerViewAdapter(ControlPanel.search(tags)));
-                ControlPanel.search(tags);
+                ItemFragment.refresh(ControlPanel.search(tags));
+                finish();
+                startActivity(getIntent());
             }
         });
     }
 
     @Override
     public void onListFragmentInteraction(Item item) {
+
     }
 
 
