@@ -141,6 +141,7 @@
         android:text="Apply" />
 
     <include
+        android:id="@+id/recyclerview"
         layout="@layout/content_closet_view"
         android:layout_width="match_parent"
         android:layout_height="479dp"
