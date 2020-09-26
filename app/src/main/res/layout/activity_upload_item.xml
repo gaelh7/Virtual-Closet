@@ -8,17 +8,17 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="145dp"
+        android:layout_width="wrap_content"
         android:layout_height="47dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="131dp"
-        android:layout_marginEnd="135dp"
-        android:layout_marginRight="135dp"
-        android:layout_marginBottom="403dp"
+        android:layout_marginLeft="133dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginRight="132dp"
+        android:layout_marginBottom="402dp"
         android:text="@string/upload_image"
         tools:layout_editor_absoluteX="192dp"
         tools:layout_editor_absoluteY="256dp" />

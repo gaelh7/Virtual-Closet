@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/activewear"
+            android:text="@string/activewear"
             android:onClick="filterTapped" />
 
         <com.google.android.material.chip.Chip
@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/dresses"
+            android:text="@string/dresses"
             android:onClick="filterTapped"/>
 
         <com.google.android.material.chip.Chip
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/jackets_coats"
+            android:text="@string/jackets_coats"
             android:onClick="filterTapped"/>
 
         <com.google.android.material.chip.Chip
@@ -53,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/jeans"
+            android:text="@string/jeans"
             android:onClick="filterTapped"/>
 
         <com.google.android.material.chip.Chip
@@ -62,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/jumpsuits"
+            android:text="@string/jumpsuits"
             android:onClick="filterTapped"/>
 
         <com.google.android.material.chip.Chip
@@ -71,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/lingerie"
+            android:text="@string/lingerie"
             android:onClick="filterTapped"/>
 
         <com.google.android.material.chip.Chip
@@ -80,7 +80,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/pants"
+            android:text="@string/pants"
             android:onClick="filterTapped"/>
 
         <com.google.android.material.chip.Chip
@@ -89,7 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/shorts"
+            android:text="@string/shorts"
             android:onClick="filterTapped"/>
 
         <com.google.android.material.chip.Chip
@@ -98,7 +98,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/skirts"
+            android:text="@string/skirts"
             android:onClick="filterTapped"/>
 
         <com.google.android.material.chip.Chip
@@ -107,7 +107,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/tops"
+            android:text="@string/tops"
             android:onClick="filterTapped"/>
 
         <com.google.android.material.chip.Chip
@@ -116,7 +116,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/sweaters"
+            android:text="@string/sweaters"
             android:onClick="filterTapped"/>
 
         <com.google.android.material.chip.Chip
@@ -125,7 +125,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/swimwear"
+            android:text="@string/swimwear"
             android:onClick="filterTapped"/>
 
     </com.google.android.material.chip.ChipGroup>
@@ -134,10 +134,10 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="496dp"
+        android:layout_marginTop="189dp"
+        android:layout_marginEnd="13dp"
         android:text="Apply" />
 
     <include
