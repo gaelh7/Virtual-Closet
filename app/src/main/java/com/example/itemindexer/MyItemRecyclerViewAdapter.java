@@ -19,9 +19,9 @@ import java.util.List;
  */
 public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecyclerViewAdapter.ViewHolder> {
 
-    private final ArrayList<Item> mValues;
+    private final List<Item> mValues;
 
-    public MyItemRecyclerViewAdapter(ArrayList<Item> items) {
+    public MyItemRecyclerViewAdapter(List<Item> items) {
         mValues = items;
     }
 
