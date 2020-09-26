@@ -11,21 +11,136 @@
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/filterchip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="0dp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipActivewear"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            tools:text="@string/activewear" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipDresses"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            tools:text="@string/dresses" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipJackets"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            tools:text="@string/jackets_coats" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipJeans"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            tools:text="@string/jeans" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipJumpsuits"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            tools:text="@string/jumpsuits" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipLingerie"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            tools:text="@string/lingerie" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipPants"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            tools:text="@string/pants" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipShorts"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            tools:text="@string/shorts" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSkirts"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            tools:text="@string/skirts" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipTops"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            tools:text="@string/tops" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSweaters"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            tools:text="@string/sweaters" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSwimwear"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            tools:text="@string/swimwear" />
 
     </com.google.android.material.chip.ChipGroup>
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="496dp"
+        android:text="Apply" />
+
     <include
         layout="@layout/content_closet_view"
-        android:layout_width="411dp"
-        android:layout_height="588dp"
+        android:layout_width="match_parent"
+        android:layout_height="524dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="false"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="-4dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="-211dp"
         android:layout_marginLeft="-1dp"
-        android:layout_marginBottom="-3dp" />
+        android:layout_marginEnd="-10dp"
+        android:layout_marginBottom="-32dp" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -42,8 +157,10 @@
         android:layout_width="90dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
         android:layout_marginTop="11dp"
         android:text="Filter By"
         android:textColor="@color/colorPrimary"
