@@ -4,6 +4,7 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
+import java.lang.reflect.Array;
 import java.util.List;
 
 import java.util.ArrayList;
@@ -20,7 +21,15 @@ public class ControlPanel {
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public static List<Item> search(boolean[] selectedTags) {
-        List<Item> highlightedItems = itemStorage.stream().filter(t -> t.matchTags(selectedTags) ).collect(Collectors.toList());
+        // List<Item> highlightedItems = itemStorage.stream().filter(t -> t.matchTags(selectedTags) ).collect(Collectors.toList());
+
+        List<Item> highlightedItems = new ArrayList<Item>();
+
+        for (int i = 0; i < Tag.NUMTAGS.ordinal(); i++) {
+            if (itemStorage.get(i).matchTags(selectedTags)) {
+                highlightedItems.add(itemStorage.get(i));
+            }
+        }
 
         return highlightedItems;
     }
