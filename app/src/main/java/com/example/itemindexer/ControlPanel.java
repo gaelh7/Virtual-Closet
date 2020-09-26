@@ -4,12 +4,9 @@ import java.util.ArrayList;
 
 public class ControlPanel {
 
-    private ArrayList<Item> itemStorage;
+    static private ArrayList<Item> itemStorage;
 
-    public void addItem() {
-        Item i = new Item();
-        // Something with the UI in which we check boxes in order to categorize
-        // If check box -> setTag(t)
+    public static void addItem(Item i) {
         itemStorage.add(i);
     }
 

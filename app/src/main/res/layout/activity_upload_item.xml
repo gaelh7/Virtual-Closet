@@ -41,17 +41,18 @@
         app:srcCompat="@android:drawable/alert_light_frame" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/activewear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="38dp"
         android:layout_marginBottom="309dp"
-        android:text="@string/activewear" />
+        android:text="@string/activewear"
+        android:onClick="onCheckboxClicked"/>
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/dresses"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -60,10 +61,11 @@
         android:layout_marginStart="38dp"
         android:layout_marginEnd="-10dp"
         android:layout_marginBottom="277dp"
-        android:text="@string/dresses" />
+        android:text="@string/dresses"
+        android:onClick="onCheckboxClicked"/>
 
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/jackets_coats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -72,10 +74,12 @@
         android:layout_marginStart="38dp"
         android:layout_marginLeft="38dp"
         android:layout_marginBottom="246dp"
-        android:text="@string/jackets_coats" />
+        android:text="@string/jackets_coats"
+        android:onClick="onCheckboxClicked"
+    />
 
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/jeans"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -84,10 +88,11 @@
         android:layout_marginStart="38dp"
         android:layout_marginLeft="38dp"
         android:layout_marginBottom="214dp"
-        android:text="@string/jeans" />
+        android:text="@string/jeans"
+        android:onClick="onCheckboxClicked"/>
 
     <CheckBox
-        android:id="@+id/checkBox5"
+        android:id="@+id/jumpsuits"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -96,10 +101,11 @@
         android:layout_marginStart="38dp"
         android:layout_marginLeft="38dp"
         android:layout_marginBottom="183dp"
-        android:text="@string/jumpsuits" />
+        android:text="@string/jumpsuits"
+        android:onClick="onCheckboxClicked"/>
 
     <CheckBox
-        android:id="@+id/checkBox6"
+        android:id="@+id/lingerie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -108,10 +114,11 @@
         android:layout_marginStart="38dp"
         android:layout_marginLeft="38dp"
         android:layout_marginBottom="151dp"
-        android:text="@string/lingerie" />
+        android:text="@string/lingerie"
+        android:onClick="onCheckboxClicked"/>
 
     <CheckBox
-        android:id="@+id/checkBox7"
+        android:id="@+id/pants"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -120,10 +127,11 @@
         android:layout_marginStart="228dp"
         android:layout_marginLeft="228dp"
         android:layout_marginBottom="152dp"
-        android:text="@string/pants" />
+        android:text="@string/pants"
+        android:onClick="onCheckboxClicked"/>
 
     <CheckBox
-        android:id="@+id/checkBox8"
+        android:id="@+id/shorts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -134,10 +142,11 @@
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp"
         android:layout_marginBottom="308dp"
-        android:text="@string/shorts" />
+        android:text="@string/shorts"
+        android:onClick="onCheckboxClicked"/>
 
     <CheckBox
-        android:id="@+id/checkBox9"
+        android:id="@+id/skirts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -146,10 +155,11 @@
         android:layout_marginStart="228dp"
         android:layout_marginLeft="228dp"
         android:layout_marginBottom="278dp"
-        android:text="@string/skirts" />
+        android:text="@string/skirts"
+        android:onClick="onCheckboxClicked"/>
 
     <CheckBox
-        android:id="@+id/checkBox10"
+        android:id="@+id/sweaters"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -158,10 +168,11 @@
         android:layout_marginStart="228dp"
         android:layout_marginLeft="228dp"
         android:layout_marginBottom="247dp"
-        android:text="@string/sweaters" />
+        android:text="@string/sweaters"
+        android:onClick="onCheckboxClicked"/>
 
     <CheckBox
-        android:id="@+id/checkBox11"
+        android:id="@+id/swimwear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -170,10 +181,11 @@
         android:layout_marginStart="228dp"
         android:layout_marginLeft="228dp"
         android:layout_marginBottom="215dp"
-        android:text="@string/swimwear" />
+        android:text="@string/swimwear"
+        android:onClick="onCheckboxClicked"/>
 
     <CheckBox
-        android:id="@+id/checkBox12"
+        android:id="@+id/tops"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -182,7 +194,8 @@
         android:layout_marginStart="228dp"
         android:layout_marginLeft="228dp"
         android:layout_marginBottom="182dp"
-        android:text="@string/tops" />
+        android:text="@string/tops"
+        android:onClick="onCheckboxClicked"/>
 
     <Button
         android:id="@+id/button5"
@@ -191,6 +204,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="61dp"
-        android:text="@string/create_item" />
+        android:text="@string/create_item"
+        android:onClick="onCheckboxClicked"/>
 
 </RelativeLayout>
