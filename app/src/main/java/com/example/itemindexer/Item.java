@@ -1,7 +1,7 @@
 package com.example.itemindexer;
 
 enum Tag{
-    ACTIVEWEAR, DRESSES, JACKETS, COATS, JEANS,
+    ACTIVEWEAR, DRESSES, JACKETS_COATS, JEANS,
     JUMPSUITS, LINGERIE, PANTS, SHORTS, SKIRTS,
     SWEATERS, SWIMWEAR, TOPS, SUITS, BLAZERS, UNDERWEAR,
     LOUNGEWEAR, NUMTAGS
@@ -10,11 +10,11 @@ enum Tag{
 public class Item {
 
     private boolean[] tags;
-    private String name;
-    private Image im;
+    private String path;
 
     //@ Precondition length(tags) == NUMTAGS
-    public Item(){
+    public Item(String path, boolean[] tags){
+        this.path = path;
         this.tags = tags; // Maybe copy
     }
 

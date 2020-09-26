@@ -1,5 +1,6 @@
 package com.example.itemindexer;
 
+import android.widget.CheckBox;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -22,9 +23,14 @@ import android.widget.Toast;
 
 public class UploadItem extends AppCompatActivity {
     private Button imageButton;
+    private Button createItem;
+    private boolean[] tags;
+    private String path;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        tags = new boolean[Tag.NUMTAGS.ordinal()];
         setContentView(R.layout.activity_upload_item);
         imageButton = findViewById(R.id.button2);
         imageButton.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +47,58 @@ public class UploadItem extends AppCompatActivity {
                 else imageActivity();
             }
         });
+        createItem = findViewById(R.id.button5);
+        createItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ControlPanel.addItem(new Item(path, tags));
+            }
+        });
+
+    }
+
+    public void onCheckboxClicked(View view){
+        CheckBox checkBox = (CheckBox)view;
+        switch (checkBox.getId()){
+            case R.id.activewear:
+                tags[Tag.ACTIVEWEAR.ordinal()] = checkBox.isChecked();
+                break;
+            case R.id.dresses:
+                tags[Tag.DRESSES.ordinal()] = checkBox.isChecked();
+                break;
+            case R.id.jackets_coats:
+                tags[Tag.JACKETS_COATS.ordinal()] = checkBox.isChecked();
+                break;
+            case R.id.jeans:
+                tags[Tag.JEANS.ordinal()] = checkBox.isChecked();
+                break;
+            case R.id.jumpsuits:
+                tags[Tag.JUMPSUITS.ordinal()] = checkBox.isChecked();
+                break;
+            case R.id.lingerie:
+                tags[Tag.LINGERIE.ordinal()] = checkBox.isChecked();
+                break;
+            case R.id.pants:
+                tags[Tag.PANTS.ordinal()] = checkBox.isChecked();
+                break;
+            case R.id.shorts:
+                tags[Tag.SHORTS.ordinal()] = checkBox.isChecked();
+                break;
+            case R.id.skirts:
+                tags[Tag.SKIRTS.ordinal()] = checkBox.isChecked();
+                break;
+            case R.id.sweaters:
+                tags[Tag.SWEATERS.ordinal()] = checkBox.isChecked();
+                break;
+            case R.id.swimwear:
+                tags[Tag.SWIMWEAR.ordinal()] = checkBox.isChecked();
+                break;
+            case R.id.tops:
+                tags[Tag.TOPS.ordinal()] = checkBox.isChecked();
+                break;
+
+        }
+
     }
 
     private void imageActivity() {
@@ -60,11 +118,12 @@ public class UploadItem extends AppCompatActivity {
             cursor.moveToFirst();
 
             int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-            String picturePath = cursor.getString(columnIndex);
+            path = cursor.getString(columnIndex);
+
             cursor.close();
 
             ImageView imageView = findViewById(R.id.imageView);
-            imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath));
+            imageView.setImageBitmap(BitmapFactory.decodeFile(path));
 
         }
 
