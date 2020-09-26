@@ -35,7 +35,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/dresses" />
+            tools:text="@string/dresses"
+            android:onClick="filterTapped"/>
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chipJackets"
@@ -43,7 +44,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/jackets_coats" />
+            tools:text="@string/jackets_coats"
+            android:onClick="filterTapped"/>
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chipJeans"
@@ -51,7 +53,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/jeans" />
+            tools:text="@string/jeans"
+            android:onClick="filterTapped"/>
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chipJumpsuits"
@@ -59,7 +62,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/jumpsuits" />
+            tools:text="@string/jumpsuits"
+            android:onClick="filterTapped"/>
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chipLingerie"
@@ -67,7 +71,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/lingerie" />
+            tools:text="@string/lingerie"
+            android:onClick="filterTapped"/>
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chipPants"
@@ -75,7 +80,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/pants" />
+            tools:text="@string/pants"
+            android:onClick="filterTapped"/>
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chipShorts"
@@ -83,7 +89,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/shorts" />
+            tools:text="@string/shorts"
+            android:onClick="filterTapped"/>
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chipSkirts"
@@ -91,7 +98,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/skirts" />
+            tools:text="@string/skirts"
+            android:onClick="filterTapped"/>
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chipTops"
@@ -99,7 +107,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/tops" />
+            tools:text="@string/tops"
+            android:onClick="filterTapped"/>
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chipSweaters"
@@ -107,7 +116,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/sweaters" />
+            tools:text="@string/sweaters"
+            android:onClick="filterTapped"/>
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chipSwimwear"
@@ -115,7 +125,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            tools:text="@string/swimwear" />
+            tools:text="@string/swimwear"
+            android:onClick="filterTapped"/>
 
     </com.google.android.material.chip.ChipGroup>
 
